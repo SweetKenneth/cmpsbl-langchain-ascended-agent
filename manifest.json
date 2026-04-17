@@ -1,0 +1,48 @@
+{
+  "name": "cmpsbl-ascended-agent",
+  "tier": "Mythic",
+  "cjpi": 92,
+  "primitives": [
+    "CANDIDATE",
+    "SOVEREIGN",
+    "SANDBOX",
+    "LINGUA",
+    "FORGE",
+    "BRAIN",
+    "SYSTEM",
+    "PHANTOM",
+    "MEMORY",
+    "ATLAS",
+    "CORTEX"
+  ],
+  "exported": "2026-04-17",
+  "runtime": "cmpsbl-convex-core-processing-layer",
+  "targets": [
+    "python"
+  ],
+  "version": "2.0.0",
+  "category": "proprietary-evolution-v2",
+  "fingerprint": "66FA8321FFF1",
+  "source": "ascension-v2-pipeline",
+  "license": {
+    "layer2": {
+      "spdx": "CAAL-1.0",
+      "file": "LICENSE.html"
+    },
+    "layer1": {
+      "spdx": "MIT",
+      "label": "MIT License",
+      "file": "LICENSE-UPSTREAM.txt"
+    }
+  },
+  "_cmpsbl": {
+    "issuer": "CMPSBL® · PromptFluid™",
+    "patents": [
+      "64/029,678",
+      "64/031,637"
+    ],
+    "url": "https://cmpsbl.com",
+    "generatedAt": "2026-04-17",
+    "fingerprint": "66FA8321FFF1"
+  }
+}

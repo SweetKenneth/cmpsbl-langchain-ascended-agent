@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>License — cmpsbl-ascended-agent — CMPSBL®</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 15px; scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: hsl(0, 0%, 100%);
+    color: hsl(220, 15%, 15%);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+  }
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+    position: relative;
+  }
+  /* Ambient hero orbs — subtle gradient mesh, mirrors FactoryHome */
+  .ambient {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    overflow: hidden;
+  }
+  .ambient::before, .ambient::after {
+    content: ''; position: absolute; border-radius: 50%; filter: blur(40px);
+  }
+  .ambient::before {
+    width: 600px; height: 600px; top: -200px; left: -200px;
+    background: radial-gradient(circle, hsla(210, 60%, 45%, 0.08), transparent 60%);
+  }
+  .ambient::after {
+    width: 500px; height: 500px; bottom: -150px; right: -150px;
+    background: radial-gradient(circle, hsla(280, 100%, 55%, 0.06), transparent 60%);
+  }
+  .page > * { position: relative; z-index: 1; }
+  @media (max-width: 640px) {
+    .page { padding: 1.5rem 1rem; }
+    html { font-size: 13px; }
+    .doc-title { font-size: 1.25rem; word-break: break-word; }
+    .doc-subtitle { font-size: 0.8rem; }
+    .meta-grid { grid-template-columns: repeat(2, 1fr); }
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    th, td { white-space: nowrap; padding: 0.4rem 0.5rem; font-size: 0.72rem; }
+    pre { padding: 0.75rem; font-size: 0.7rem; }
+    code { word-break: break-all; }
+    .highlight { padding: 0.7rem 1rem; font-size: 0.78rem; }
+    .colophon { flex-direction: column; align-items: flex-start; }
+    h2 { font-size: 0.95rem; }
+    .cmpsbl-wordmark { font-size: 3.25rem; }
+  }
+  @media (max-width: 380px) {
+    .page { padding: 1.25rem 0.75rem; }
+    .meta-grid { grid-template-columns: 1fr; }
+    th, td { font-size: 0.65rem; padding: 0.3rem 0.4rem; }
+    .cmpsbl-wordmark { font-size: 2.5rem; }
+  }
+  /* ── Animated CMPSBL® wordmark — mirrors src/components/hero/CmpsblWordmark.tsx ── */
+  @keyframes cmpsblLetterFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+  @keyframes cmpsblPulseGlow {
+    0%, 100% { filter: drop-shadow(0 0 12px hsla(210, 60%, 45%, 0.18)); }
+    50%      { filter: drop-shadow(0 0 24px hsla(280, 100%, 55%, 0.28)); }
+  }
+  .cmpsbl-wordmark {
+    display: inline-flex; align-items: baseline; user-select: none;
+    font-size: 4.5rem; font-weight: 900; line-height: 1;
+    animation: cmpsblPulseGlow 3s ease-in-out infinite;
+  }
+  .cmpsbl-wordmark .cm-l {
+    display: inline-block; line-height: 1;
+    background-size: 200% 200%;
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    animation: cmpsblLetterFlow 5s ease-in-out infinite;
+  }
+  .cmpsbl-wordmark .cm-l + .cm-l { margin-left: -0.015em; }
+  .cmpsbl-wordmark .cm-c { background-image: linear-gradient(135deg, hsl(185, 100%, 40%), hsl(210, 60%, 45%), hsl(185, 100%, 40%));  transform: translateY(2px);  animation-delay: 0s; }
+  .cmpsbl-wordmark .cm-m { background-image: linear-gradient(135deg, hsl(210, 60%, 45%), hsl(280, 100%, 55%), hsl(210, 60%, 45%));  transform: translateY(-3px); animation-delay: 0.8s; }
+  .cmpsbl-wordmark .cm-p { background-image: linear-gradient(135deg, hsl(280, 100%, 55%), hsl(310, 100%, 50%), hsl(280, 100%, 55%)); transform: translateY(2px);  animation-delay: 1.6s; }
+  .cmpsbl-wordmark .cm-s { background-image: linear-gradient(135deg, hsl(310, 100%, 50%), hsl(185, 100%, 40%), hsl(310, 100%, 50%)); transform: translateY(-2px); animation-delay: 2.4s; }
+  .cmpsbl-wordmark .cm-b { background-image: linear-gradient(135deg, hsl(185, 100%, 40%), hsl(280, 100%, 55%), hsl(185, 100%, 40%));  transform: translateY(3px);  animation-delay: 3.2s; }
+  .cmpsbl-wordmark .cm-l2{ background-image: linear-gradient(135deg, hsl(210, 60%, 45%), hsl(310, 100%, 50%), hsl(210, 60%, 45%));  transform: translateY(-2px); animation-delay: 4.0s; }
+  .cmpsbl-wordmark .cm-r {
+    display: inline-block; font-size: 0.35em; font-weight: 700;
+    vertical-align: super; margin-left: 0.05em; line-height: 1;
+    background-image: linear-gradient(135deg, hsl(185, 100%, 40%), hsl(210, 60%, 45%), hsl(280, 100%, 55%));
+    background-size: 200% 200%;
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    animation: cmpsblLetterFlow 5s ease-in-out infinite;
+    animation-delay: 4.8s;
+  }
+  .doc-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid hsl(220, 10%, 85%);
+    margin-bottom: 2rem;
+  }
+  .doc-header .issuer {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: hsl(220, 10%, 35%);
+    margin: 1.5rem 0 0.75rem;
+  }
+  .doc-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    color: hsl(220, 15%, 15%);
+  }
+  .doc-subtitle {
+    font-size: 0.9rem;
+    color: hsl(220, 10%, 35%);
+    margin-top: 0.4rem;
+  }
+  .seal-area { display: flex; justify-content: center; margin: 1.25rem 0 1.5rem; }
+  h2 {
+    font-size: 1.1rem; font-weight: 700;
+    margin: 2rem 0 0.8rem; padding-bottom: 0.45rem;
+    border-bottom: 1px solid hsl(220, 10%, 85%);
+    color: hsl(220, 15%, 15%);
+  }
+  h3 { font-size: 0.95rem; font-weight: 600; margin: 1.2rem 0 0.5rem; color: hsl(220, 15%, 15%); }
+  p  { margin-bottom: 0.8rem; color: hsl(220, 15%, 15%); font-size: 0.9rem; }
+  ul, ol { padding-left: 1.5rem; margin-bottom: 0.8rem; }
+  li { margin-bottom: 0.35rem; color: hsl(220, 15%, 15%); font-size: 0.9rem; }
+  a  { color: hsl(210, 60%, 45%); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.82em; background: hsl(220, 14%, 96%);
+    padding: 0.15em 0.4em; border-radius: 4px; color: hsl(210, 60%, 45%);
+    border: 1px solid hsl(220, 10%, 85%);
+  }
+  pre {
+    background: hsl(220, 14%, 96%);
+    border: 1px solid hsl(220, 10%, 85%);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: hsl(220, 15%, 15%);
+    margin: 0.8rem 0;
+  }
+  .highlight {
+    background: hsla(210, 60%, 45%, 0.06);
+    border-left: 3px solid hsl(210, 60%, 45%);
+    padding: 0.9rem 1.25rem;
+    border-radius: 0 6px 6px 0;
+    margin: 1rem 0;
+    font-size: 0.88rem;
+    color: hsl(220, 15%, 15%);
+  }
+  .highlight strong { color: hsl(220, 15%, 15%); }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .meta-item {
+    background: hsl(0, 0%, 100%);
+    border: 1px solid hsl(220, 10%, 85%);
+    border-radius: 8px;
+    padding: 0.7rem 0.9rem;
+  }
+  .meta-label { font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: hsl(220, 10%, 35%); }
+  .meta-value { font-size: 0.85rem; font-weight: 500; color: hsl(220, 15%, 15%); margin-top: 0.15rem; }
+  .toc { list-style: none; padding: 0; }
+  .toc li { padding: 0.4rem 0; border-bottom: 1px solid hsl(220, 10%, 85%); }
+  .toc a { color: hsl(210, 60%, 45%); text-decoration: none; font-size: 0.88rem; }
+  .toc a:hover { text-decoration: underline; }
+  table {
+    width: 100%; border-collapse: collapse; margin: 0.8rem 0;
+    font-size: 0.85rem;
+  }
+  th { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 2px solid hsl(220, 10%, 85%); color: hsl(220, 10%, 35%); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { padding: 0.55rem 0.7rem; border-bottom: 1px solid hsl(220, 10%, 85%); color: hsl(220, 15%, 15%); }
+  .colophon {
+    margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid hsl(220, 10%, 85%);
+    display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;
+  }
+  .colophon-left  { font-size: 0.7rem; color: hsl(220, 10%, 35%); line-height: 1.8; }
+  .colophon-right { font-size: 0.95rem; font-weight: 700; color: hsl(220, 10%, 35%); letter-spacing: 0.05em; }
+  .patent-notice  { font-size: 0.72rem; color: hsl(220, 10%, 35%); font-style: italic; margin-top: 1rem; }
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+
+<div class="page">
+  <header class="doc-header">
+    <div class="issuer">CMPSBL® · PromptFluid™ · CAAL-1.0</div>
+    <div class="doc-title">CMPSBL® Ascended Artifact License</div>
+    <div class="doc-subtitle">Version 1.0 (CAAL-1.0) · SPDX: LicenseRef-CMPSBL-CAAL-1.0</div>
+  </header>
+  
+  <div class="seal-area">
+    <span class="cmpsbl-wordmark" aria-label="CMPSBL®" role="img">
+      <span class="cm-l cm-c">C</span><span class="cm-l cm-m">M</span><span class="cm-l cm-p">P</span><span class="cm-l cm-s">S</span><span class="cm-l cm-b">B</span><span class="cm-l cm-l2">L</span><span class="cm-r">®</span>
+    </span>
+  </div>
+
+  <p style="text-align:center; font-size:0.85rem; color:hsl(220, 10%, 35%); margin-bottom:1.5rem;">
+    Issued April 17, 2026 for <strong style="color:hsl(220, 15%, 15%);">cmpsbl-ascended-agent</strong>
+  </p>
+
+  <div class="meta-grid">
+    <div class="meta-item"><div class="meta-label">Artifact Serial</div><div class="meta-value"><code>—</code></div></div>
+    <div class="meta-item"><div class="meta-label">Artifact Fingerprint</div><div class="meta-value"><code>66FA8321FFF1</code></div></div>
+  </div>
+
+  <div class="highlight">
+    <strong>Redistribute & sell freely · No modification or reverse engineering · Attribution to CMPSBL® required.</strong>
+  </div>
+
+  <h2>§1 — Definitions</h2>
+  <p>
+    <strong>"Artifact"</strong> means the single-file software output produced by the CMPSBL®
+    Ascension pipeline, consisting of two layers:
+  </p>
+  <ul>
+    <li><strong>Layer 1</strong> — the original source code, copied byte-for-byte and
+      carrying its own upstream license. <em>This License does not apply to Layer 1.</em></li>
+    <li><strong>Layer 2</strong> — the CMPSBL® wrapper, runtime, dispatch matrix, primitive
+      activations, and embedded governance, generated by the Ascension pipeline.
+      <em>This License governs Layer 2.</em></li>
+  </ul>
+
+  <h2>§2 — Grant of Rights (Layer 2)</h2>
+  <p>Subject to the conditions below, you are granted a perpetual, worldwide, royalty-free,
+    non-exclusive license to:</p>
+  <ul>
+    <li><strong>(a) Reproduce</strong> the Artifact in source or binary form.</li>
+    <li><strong>(b) Distribute</strong> the Artifact, alone or as part of a larger work.</li>
+    <li><strong>(c) Sell</strong> the Artifact, including as part of a commercial product or service.</li>
+    <li><strong>(d) Sublicense</strong> downstream recipients on the same CAAL-1.0 terms.</li>
+  </ul>
+
+  <h2>§3 — Restrictions (Layer 2)</h2>
+  <p>You may <strong>NOT</strong>:</p>
+  <ul>
+    <li><strong>Modify</strong>, patch, fork, or alter the Layer 2 wrapper, runtime, or dispatch matrix.</li>
+    <li><strong>Reverse engineer</strong>, decompile, disassemble, or otherwise attempt to derive the source form of obfuscated or compiled Layer 2 components.</li>
+    <li><strong>Extract</strong>, isolate, or repackage internal primitives, engines, or governance logic for use outside the Artifact.</li>
+    <li><strong>Remove</strong> or obscure the CMPSBL® attribution, this License header, the artifact fingerprint, or any embedded provenance markers.</li>
+  </ul>
+
+  <h2>§4 — Attribution Requirements</h2>
+  <p>Every redistribution must preserve, prominently and unmodified:</p>
+  <div class="highlight">
+    <strong>"Powered by CMPSBL® · https://cmpsbl.com<br/>
+    Ascended Layer 2 Technology · CAAL-1.0 · Patent Pending"</strong>
+  </div>
+  <p>The inline Layer 2 license header inside the Artifact, this LICENSE document, and the
+    artifact fingerprint must travel with every copy.</p>
+
+  <h2>§5 — Intellectual Property</h2>
+  <p>
+    The Layer 2 technology — including the Convex Core™ processing layer, the CJPI scoring
+    algorithm, the dispatch matrix, and the behavioral primitives (DEFENSE, CORTEX, NEXUS,
+    BRAIN, ORACLE, et al.) — is proprietary to CMPSBL® and protected under
+    U.S. Patent App. No. 64/029,678 and U.S. Patent App. No. 64/031,637. The Artifact is a
+    finished product, not a blueprint of the underlying pipeline.
+  </p>
+
+  <h2>§6 — Termination</h2>
+  <p>Any breach of §3 or §4 immediately and automatically terminates all rights granted
+    under this License. Upon termination, the licensee must cease distribution and destroy
+    all copies under their control.</p>
+
+  <h2>§7 — Disclaimer of Warranty</h2>
+  <p style="font-size:0.78rem; color:hsl(220, 10%, 35%); text-transform:uppercase; letter-spacing:0.02em; line-height:1.9;">
+    The Artifact is provided "AS IS", without warranty of any kind, express or implied,
+    including but not limited to the warranties of merchantability, fitness for a particular
+    purpose, and noninfringement.
+  </p>
+
+  <h2>§8 — Limitation of Liability</h2>
+  <p style="font-size:0.78rem; color:hsl(220, 10%, 35%); text-transform:uppercase; letter-spacing:0.02em; line-height:1.9;">
+    In no event shall CMPSBL®, PromptFluid™, or the inventor be liable for any claim,
+    damages, or other liability — whether in contract, tort, or otherwise — arising from,
+    out of, or in connection with the Artifact or the use or other dealings in the Artifact.
+  </p>
+
+  
+  <div class="colophon">
+    <div class="colophon-left">
+      CMPSBL® · PromptFluid™<br>
+      <a href="https://cmpsbl.com">https://cmpsbl.com</a><br>
+      © 2026 CMPSBL®. All rights reserved.<br>
+      U.S. Patent App. No. 64/029,678 · U.S. Patent App. No. 64/031,637
+    </div>
+    <div class="colophon-right">CMPSBL®</div>
+  </div>
+  <p class="patent-notice">
+    Invented by Kenneth E. Sweet Jr. · Patent Pending · PromptFluid™ TX
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+═══════════════════════════════════════════════════════════════════════════════
+  NOTICE — Attribution for agent.py (Layer 1 of this artifact)
+═══════════════════════════════════════════════════════════════════════════════
+
+Upstream license : MIT License
+SPDX identifier  : MIT
+
+This artifact is a CMPSBL® Ascension dual-layer package:
+
+  • Layer 1 — your original source (governed by MIT License).
+             See LICENSE-UPSTREAM.txt for the full license text.
+
+  • Layer 2 — the CMPSBL® wrapper, primitives, and runtime
+             (governed by CAAL-1.0 — see LICENSE.html).
+
+CAAL-1.0 §1 explicitly excludes Layer 1. Distribution of this artifact
+must therefore comply with both MIT License (for Layer 1) and CAAL-1.0
+(for Layer 2). This NOTICE file satisfies the attribution-travel
+requirement of MIT License.
+
+═══════════════════════════════════════════════════════════════════════════════

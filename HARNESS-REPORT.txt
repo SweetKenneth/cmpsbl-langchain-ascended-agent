@@ -1,0 +1,13 @@
+CMPSBL® Ascension V2 — Pre-Export Harness Report
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Verdict: ✓ PASSED
+Critical failures: 0
+Soft warnings: 0
+Total time: 12ms
+
+Checks:
+  ✓ [CRITICAL] Syntax / AST validity              — Layer 2 parsed clean (107 advisory notes) (10ms)
+  ✓ [CRITICAL] Layer-2 ↔ Layer-1 linkage          — All 1 source file(s) linked into Layer 2 (0ms)
+  ✓ [CRITICAL] Layer-1 fingerprint integrity      — Byte-perfect Layer 1 preserved (fp: a79f2683) (1ms)
+  ✓ [CRITICAL] CMPSBL Layer auto-wire             — 6 layer(s) auto-wired: Self-Healing Layer, Autonomous Triage Layer, Oracle-Ripple Precognition Layer, Cyber Defense Layer, AI Safety Layer, AI Cost Intelligence Layer (0ms)
+  ✓ [CRITICAL] Layer execution smoke              — Entry point + 41 handler(s) detected (0ms)

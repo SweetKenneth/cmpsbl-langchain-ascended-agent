@@ -1,0 +1,14 @@
+# Upstream License — MIT License
+# SPDX-License-Identifier: MIT
+# Applies to: agent.py (Layer 1 of this Ascension artifact)
+#
+# CMPSBL® Ascension wraps your source verbatim. Layer 1 retains its
+# original MIT License terms in full. The CMPSBL® CAAL-1.0 license
+# in LICENSE.html governs only Layer 2 (the wrapper). This file ships
+# the upstream license text so distribution complies with MIT License.MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
