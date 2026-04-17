@@ -28,20 +28,28 @@ Attach behavior at runtime instead of modifying the source
 
 	•	agent.py
 → Original source (Layer 1, MIT licensed)
+
 	•	cmpsbl_agent.py
 → Ascended version (Layer 2 attached)
+
 	•	manifest.json
 → Artifact identity (CJPI score + fingerprint)
+
 	•	HARNESS-REPORT.txt
 → Pre-export verification (passed)
+
 	•	USER-GUIDE.html
 → Debug + verify modes and capability breakdown
+
 	•	LICENSE-UPSTREAM.txt
 → Original MIT license
+
 	•	LICENSE.html
 → Layer 2 license (CAAL-1.0)
+
 	•	NOTICE.txt
 → Attribution and license separation
+
 
 ⸻
 
